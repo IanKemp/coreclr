@@ -112,7 +112,7 @@ namespace System
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:System.Threading.Lazy{T}"/> class that 
+        /// Initializes a new instance of the <see cref="T:System.Lazy{T}"/> class that 
         /// uses <typeparamref name="T"/>'s default constructor for lazy initialization.
         /// </summary>
         /// <remarks>
@@ -124,7 +124,7 @@ namespace System
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:System.Threading.Lazy{T}"/> class that uses a
+        /// Initializes a new instance of the <see cref="T:System.Lazy{T}"/> class that uses a
         /// specified initialization function.
         /// </summary>
         /// <param name="valueFactory">
@@ -142,7 +142,7 @@ namespace System
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:System.Threading.Lazy{T}"/>
+        /// Initializes a new instance of the <see cref="T:System.Lazy{T}"/>
         /// class that uses <typeparamref name="T"/>'s default constructor and a specified thread-safety mode.
         /// </summary>
         /// <param name="isThreadSafe">true if this instance should be usable by multiple threads concurrently; false if the instance will only be used by one thread at a time.
@@ -153,7 +153,7 @@ namespace System
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:System.Threading.Lazy{T}"/>
+        /// Initializes a new instance of the <see cref="T:System.Lazy{T}"/>
         /// class that uses <typeparamref name="T"/>'s default constructor and a specified thread-safety mode.
         /// </summary>
         /// <param name="mode">The lazy thread-safety mode mode</param>
@@ -163,9 +163,8 @@ namespace System
             m_threadSafeObj = GetObjectFromMode(mode);
         }
 
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:System.Threading.Lazy{T}"/> class
+        /// Initializes a new instance of the <see cref="T:System.Lazy{T}"/> class
         /// that uses a specified initialization function and a specified thread-safety mode.
         /// </summary>
         /// <param name="valueFactory">
@@ -181,7 +180,7 @@ namespace System
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:System.Threading.Lazy{T}"/> class
+        /// Initializes a new instance of the <see cref="T:System.Lazy{T}"/> class
         /// that uses a specified initialization function and a specified thread-safety mode.
         /// </summary>
         /// <param name="valueFactory">
@@ -287,24 +286,24 @@ namespace System
         }
 
         /// <summary>Gets the lazily initialized value of the current <see
-        /// cref="T:System.Threading.Lazy{T}"/>.</summary>
+        /// cref="T:System.Lazy{T}"/>.</summary>
         /// <value>The lazily initialized value of the current <see
-        /// cref="T:System.Threading.Lazy{T}"/>.</value>
+        /// cref="T:System.Lazy{T}"/>.</value>
         /// <exception cref="T:System.MissingMemberException">
-        /// The <see cref="T:System.Threading.Lazy{T}"/> was initialized to use the default constructor 
+        /// The <see cref="T:System.Lazy{T}"/> was initialized to use the default constructor 
         /// of the type being lazily initialized, and that type does not have a public, parameterless constructor.
         /// </exception>
         /// <exception cref="T:System.MemberAccessException">
-        /// The <see cref="T:System.Threading.Lazy{T}"/> was initialized to use the default constructor 
+        /// The <see cref="T:System.Lazy{T}"/> was initialized to use the default constructor 
         /// of the type being lazily initialized, and permissions to access the constructor were missing.
         /// </exception>
         /// <exception cref="T:System.InvalidOperationException">
-        /// The <see cref="T:System.Threading.Lazy{T}"/> was constructed with the <see cref="T:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication"/> or
+        /// The <see cref="T:System.Lazy{T}"/> was constructed with the <see cref="T:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication"/> or
         /// <see cref="T:System.Threading.LazyThreadSafetyMode.None"/>  and the initialization function attempted to access <see cref="Value"/> on this instance.
         /// </exception>
         /// <remarks>
         /// If <see cref="IsValueCreated"/> is false, accessing <see cref="Value"/> will force initialization.
-        /// Please <see cref="System.Threading.LazyThreadSafetyMode"> for more information on how <see cref="T:System.Threading.Lazy{T}"/> will behave if an exception is thrown
+        /// Please <see cref="System.Threading.LazyThreadSafetyMode"> for more information on how <see cref="T:System.Lazy{T}"/> will behave if an exception is thrown
         /// from initialization delegate.
         /// </remarks>
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -458,7 +457,6 @@ namespace System
 
             return boxed;
         }
-
     }
 
     /// <summary>A debugger view of the Lazy&lt;T&gt; to surface additional debugging properties and 
