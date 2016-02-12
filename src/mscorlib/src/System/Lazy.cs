@@ -457,6 +457,14 @@ namespace System
 
             return boxed;
         }
+
+        /// <summary>Allows the value of this <see cref="T:Lazy{T}"/> to be accessed without having to explicitly reference the <see cref="Value"/> property.</summary>
+        /// <returns>The value of this <see cref="T:System.Lazy{T}"/>.</returns>
+        /// <remarks>Refer to the documentation for the <see cref="Value"/> property to view the possible exceptions that can be thrown by this method.</remarks>
+        public static implicit operator T(Lazy<T> lazy)
+        {
+            return lazy.Value;
+        }
     }
 
     /// <summary>A debugger view of the Lazy&lt;T&gt; to surface additional debugging properties and 
